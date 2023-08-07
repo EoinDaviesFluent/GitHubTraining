@@ -1,4 +1,3 @@
-import math
 print ('''Pythagoras' Calculator:
 1. Find the length of A given B and C
 2. Find the length of B given A and C
@@ -13,7 +12,7 @@ if choice=='1':
     else:
         squared_b=side_b**2
         squared_c=side_c**2
-        side_a=math.sqrt(squared_c-squared_b)
+        side_a=(squared_c-squared_b)**0.5
         print ('Length of A:',side_a)
 elif choice=='2':
     side_a=float(input('Please input the length of side A: '))
@@ -24,7 +23,7 @@ elif choice=='2':
         squared_a=side_a**2
         squared_c=side_c**2
         #print (squared_a,squared_c,squared_c-squared_a)
-        side_b=math.sqrt(squared_c-squared_a)
+        side_b=(squared_c-squared_a)**0.5
         print ('Length of B:',side_b)
 else:
     side_a=float(input('Please input the length of side A: '))
@@ -32,5 +31,5 @@ else:
     squared_a=side_a**2
     squared_b=side_b**2
     squared_c=squared_a+squared_b
-    side_c=math.sqrt(squared_c)
+    side_c=(squared_c)**0.5
     print ('Length of C:',side_c)
