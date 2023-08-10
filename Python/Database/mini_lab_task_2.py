@@ -53,3 +53,11 @@ for row in result:
     print(row)
 print ()
 #print (len(result))
+
+save=input('Would you like to commit and close (save changes to database) - (t/f)')
+if save=='t':
+    conn.commit()
+    conn.close()
+    print ('Saved')
+else:
+    print ('Not saved')
