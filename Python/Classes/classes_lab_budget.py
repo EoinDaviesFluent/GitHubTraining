@@ -16,8 +16,10 @@ class Budget:
 		self.budget+=num_value
 		return self.budget
 	def transfer(self,num_value,transfer_to_cat):
-		transfer_to_cat.budget+=num_value
-		self.budget-=num_value
+		
+		transfer_to_cat.deposit(num_value)
+		self.withdraw(num_value)
+		
 print ('1) Total budget',total_budget)
 clothing=Budget(30) # gives clothing a pre-budget of 30
 entertainment=Budget() # no budget defaults to 0
